@@ -1,13 +1,24 @@
 <html>
 <head>
 <link rel="stylesheet" href="titlesection/titlesection.css">
+<link rel="stylesheet" href="./aboutmesection/aboutmesection.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Armata">
 </head>
 <body>
     <div class="main-section"  id="title">
-        <h1>welcome to Esther's web page</h1>
-        <p>This is where dreams come true</p>
-        <button class="title-section-button"   onclick="makedreamcomeTrue()">Make dream come true</button>
+        <h1 class="title-section-header">Esther Ibeh</h1>
+        <p class="title-section-subtitle">Empowering Individuals Through Education</p>
+        <button class="title-section-button"   onclick="makedreamcomeTrue()">COMBINE KNOWLEDGE WITH ACTION</button>
+    </div>
+    <div class="misc-section" id="aboutme">
+        <div class="text-block-container">
+            <h1>About Me</h1>
+            <p class="aboutme-section-description">I am a biochemistry graduate who is on a journey of self-discovery.
+               I have always been passionate about growing and evolving and this is 
+               where this mindset has landed me, 
+               on the path of becoming a full time software engineer.</p>   
+        </div>
+        
     </div>
 </body>
 </html>
@@ -28,6 +39,19 @@ html, body {
     width: 100vw;
     height: 100vh;
     background-size: cover;
+    padding: 25px;
+}
+
+.misc-section {
+    width: 100vw;
+    padding: 100px 25px;
+}
+
+
+
+.text-block-container {
+    width: 65%;
+    margin: 0 auto;
 }
 
 </style>
