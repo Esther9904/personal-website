@@ -12,4 +12,6 @@ button:hover {
 #title {
         text-align: center;
         padding-top: 200px;
+        background-image: url('../images/birdbackground-unsplash.jpg');
+        background-position: center top;
 }
