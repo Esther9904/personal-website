@@ -12,6 +12,10 @@
     margin-top: 45px;
 }
 
+.aboutme-icons > a {
+    text-decoration: none;
+}
+
 .aboutme-icons {
     margin: 10px;
     color: var(--titleSectionSecondaryColor)
