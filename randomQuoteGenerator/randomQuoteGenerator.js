@@ -21,17 +21,18 @@ function getRandomColorCombo () {
 }
   
 
-function getNewRandomQuote () {
-	fetch("https://quoteslate.vercel.app/api/quotes/random")
-  .then(res => res.json())
-  .then(data => {
-    const colorCombo = getRandomColorCombo()
-    randomQuotesGeneratorElement.style.background = 'linear-gradient(45deg, ' + colorCombo[0] + ', ' + colorCombo[1]+ ')'
-    const quoteText = data.quote
-    const quoteAuthor = data.author
-    document.getElementById('random-quote-text').innerHTML = quoteText
-    document.getElementById('random-quote-author').innerHTML = quoteAuthor
-  })
+async function getNewRandomQuote () {
+  const response = await fetch("https://quoteslate.vercel.app/api/quotes/random")
+  if (!response.ok) {
+    alert('There was a problem getting a new quote!');
+  }
+  const data = await response.json()
 
+  const quoteText = data.quote
+  const quoteAuthor = data.author
+  document.getElementById('random-quote-text').innerHTML = quoteText
+  document.getElementById('random-quote-author').innerHTML = quoteAuthor
 
-}
+  const colorCombo = getRandomColorCombo()
+  randomQuotesGeneratorElement.style.background = 'linear-gradient(45deg, ' + colorCombo[0] + ', ' + colorCombo[1]+ ')'
+ }
