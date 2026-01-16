@@ -1,5 +1,5 @@
-import { almostWhole } from 'chart.js/helpers'
-import styled, { type Styled } from 'styled-components'
+// import { almostWhole } from 'chart.js/helpers'
+import styled from 'styled-components'
 
 export async function analyzeStock(stockSymbolToAnalyze: string) {
   if (stockSymbolToAnalyze.length == 0) {
